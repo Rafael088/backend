@@ -20,7 +20,7 @@ export async function cUser(req, res) {
         let user;
 
         const salt = bcrypt.genSaltSync()
-        data.password = bcrypt.hashSync(data.password, salt) //Escriptar Contraseña
+        data.password = bcrypt.hashSync(data.password, salt)
 
         user = new User(data); //Asignamos el esquema con los datos nuevos
 

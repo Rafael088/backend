@@ -3,6 +3,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import users from './routes/users.js';
+import products from './routes/products.js';
+import chats from './routes/chats.js';
 
 
 dotenv.config();
@@ -18,6 +20,8 @@ app.use(
 )
 app.use(express.json())
 app.use(users)
+app.use(products)
+app.use(chats)
 
 
 export default app
